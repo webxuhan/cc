@@ -20,8 +20,8 @@
     </transition>
   </div>
 </template>
-
 <script>
+import { adminLogin } from '@/api/index'
 export default {
   name: 'adminLogin',
   data () {
@@ -47,6 +47,13 @@ export default {
         console.log('validate:', validate)
         if (validate) {
           console.log('提交数据')
+          adminLogin(this.loginForm).then(res => {
+            console.log('res:', res)
+            const data = res.data
+            if (data.success === true) {
+              this.$router.push('/manage')
+            }
+          })
         } else {
           this.$notify.error({
             title: '错误',
