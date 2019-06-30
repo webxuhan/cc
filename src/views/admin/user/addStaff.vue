@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row class="reg-wrap">
-      <el-col :span="12" offset="6">
+      <el-col :span="12" :offset="6">
         <el-form :model="staffForm" :rules="rule" ref="staffForm">
           <el-form-item label="员工姓名" prop="userName">
             <el-input v-model="staffForm.userName" placeholder="请输入用户名"></el-input>
