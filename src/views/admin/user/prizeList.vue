@@ -14,7 +14,7 @@
 <script>
 
 export default {
-  name: 'goodsList',
+  name: 'prizeList',
   data () {
     return {
       tableData: [{

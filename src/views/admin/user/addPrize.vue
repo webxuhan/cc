@@ -11,7 +11,7 @@
 <script>
 
 export default {
-  name: 'add-good',
+  name: 'addPrize',
   data () {
     return {
       tableData: [{

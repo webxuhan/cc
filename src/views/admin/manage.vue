@@ -6,28 +6,23 @@
         <el-menu :default-active="defaultActive" text-color="#bfcbd9" background-color="#324057" router style="min-height: 100vh;">
           <el-menu-item index="/manage/home"><i class="el-icon-menu"></i>首页</el-menu-item>
           <el-submenu index="2">
-            <template slot="title"><i class="el-icon-document"></i>分类管理</template>
-            <el-menu-item index="/manage/categoryList">分类列表</el-menu-item>
-            <el-menu-item index="/manage/addCategory">添加分类</el-menu-item>
+            <template slot="title"><i class="el-icon-plus"></i>商品管理</template>
+            <el-menu-item index="/manage/prizeList">商品列表</el-menu-item>
+            <el-menu-item index="/manage/addPrize">添加商品</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
-            <template slot="title"><i class="el-icon-plus"></i>商品管理</template>
-            <el-menu-item index="/manage/goodsList">商品列表</el-menu-item>
-            <el-menu-item index="/manage/addGood">添加商品</el-menu-item>
-          </el-submenu>
-          <el-submenu index="4">
             <template slot="title"><i class="el-icon-star-on"></i>图表</template>
             <el-menu-item index="visitor">用户分布</el-menu-item>
           </el-submenu>
-          <el-submenu index="5">
+          <el-submenu index="4">
             <template slot="title"><i class="el-icon-edit"></i>编辑</template>
             <el-menu-item index="vueEdit">文本编辑</el-menu-item>
           </el-submenu>
-          <el-submenu index="6">
+          <el-submenu index="5">
             <template slot="title"><i class="el-icon-setting"></i>设置</template>
             <el-menu-item index="adminSet">管理员设置</el-menu-item>
           </el-submenu>
-          <el-submenu index="7">
+          <el-submenu index="6">
             <template slot="title"><i class="el-icon-information"></i>员工管理</template>
             <el-menu-item index="/manage/staffList">员工列表</el-menu-item>
             <el-menu-item index="/manage/addStaff">添加员工</el-menu-item>

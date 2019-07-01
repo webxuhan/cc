@@ -8,8 +8,9 @@ const welcome = r => require.ensure([], () => r(require('@/views/site/welcome'))
 const adminLogin = r => require.ensure([], () => r(require('@/views/admin/adminLogin')), 'adminLogin')
 const manage = r => require.ensure([], () => r(require('@/views/admin/manage')), 'manage')
 const addStaff = r => require.ensure([], () => r(require('@/views/admin/user/addStaff')), 'addStaff')
-const goodsList = r => require.ensure([], () => r(require('@/views/admin/user/goodsList')), 'goodsList')
-const addGood = r => require.ensure([], () => r(require('@/views/admin/user/addGood')), 'addGood')
+const prizeList = r => require.ensure([], () => r(require('@/views/admin/user/prizeList')), 'prizeList')
+const addPrize = r => require.ensure([], () => r(require('@/views/admin/user/addPrize')), 'addPrize')
+const staffList = r => require.ensure([], () => r(require('@/views/admin/user/staffList')), 'staffList')
 
 export default new Router({
   routes: [
@@ -31,13 +32,17 @@ export default new Router({
           component: addStaff,
           meta: ['员工管理', '添加员工']
         }, {
-          path: 'goodsList',
-          component: goodsList,
+          path: 'prizeList',
+          component: prizeList,
           meta: ['商品管理', '商品列表']
         }, {
-          path: 'addGood',
-          component: addGood,
+          path: 'addPrize',
+          component: addPrize,
           meta: ['商品管理', '添加商品']
+        }, {
+          path: 'staffList',
+          component: staffList,
+          meta: ['员工管理', '员工列表']
         }
       ]
     }
